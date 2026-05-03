@@ -1,0 +1,224 @@
+/* Styles généraux */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Sidebar fixe */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(135deg, #333741);
+    padding: 20px;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.sidebar h3 {
+    color: white;
+    margin-bottom: 20rem;
+}
+
+.sidebar .nav-item {
+    margin-bottom: 50px;
+}
+
+.sidebar .btn {
+    transition: all 0.3s ease;
+    height: 50px;
+}
+
+.sidebar .btn:hover {
+    background-color: white;
+    color: #667eea;
+    transform: translateX(5px);
+}
+
+/* Contenu principal */
+.main-content {
+    margin-left: 250px;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.flex-grow-1 {
+    margin-left: 250px;
+    min-height: 100vh;
+}
+
+/* Images */
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+/* Logos */
+.small-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.small-logo:hover {
+    transform: scale(1.1);
+}
+
+.logos-section {
+    margin: 2rem 0;
+}
+
+/* Utilitaires */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bouton Notion fixe */
+.notion-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+.gallery-wrapper {
+    max-width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content,
+    .flex-grow-1 {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content,
+    .flex-grow-1 {
+        margin-left: 0;
+    }
+
+    .images-container {
+        max-width: 100%;
+    }
+
+
+    .notion-button {
+        position: relative;
+        left: 0;
+        transform: none;
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333741;
+    color: #ffffff;
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 3px solid #667eea;
+}
+
+.footer .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.footer .column {
+    text-align: left;
+}
+
+.footer .is-logo .footer_text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer .copyright {
+    display: block;
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.footer .column-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #667eea;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+}
+
+.footer_a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer_a:hover {
+    color: #667eea;
+}
+
+.footer i {
+    margin-right: 8px;
+}
+
+/* Responsive Footer */
+@media (max-width: 576px) {
+    .footer .inner {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer {
+        padding: 30px 15px;
+    }
+}
