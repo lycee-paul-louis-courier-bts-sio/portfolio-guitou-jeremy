@@ -4,48 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Veille Technologique</title>
-    <link rel="stylesheet" href="../Assets/css/css.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,900;1,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../css/utilities.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
     <style></style>
   </head>
   <body>
-    <div class="d-flex">
-      <!-- Sidebar -->
-      <div class="sidebar text-center">
-        <h3 class="text-light mb-3">Menu</h3>
-        <ul class="nav flex-column gap-2">
+    <div id="sidebar"></div>
+
+    <div class="main-content flex-grow-1">
           <li class="nav-item">
-            <a class="btn btn-outline-light w-100" href="../index.html"
-              >Accueil</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-outline-light w-100" href="views/about.html"
+            <a class="btn btn-outline-light w-100" href="about.html"
               >À propos</a
             >
           </li>
           <li class="nav-item">
-            <a class="btn btn-outline-light w-100" href="views/projets.html"
+            <a class="btn btn-outline-light w-100" href="Projets.html"
               >Projets</a
             >
           </li>
           <li class="nav-item">
-            <a class="btn btn-outline-light w-100" href="views/contact.html"
+            <a class="btn btn-outline-light w-100" href="contact.html"
               >Contact</a
             >
           </li>
           <li class="nav-item">
-            <a class="btn btn-outline-light w-100" href="views/stage.html"
-              >Stage</a
-            >
+            <a class="btn btn-outline-light w-100" href="Stage.html">Stage</a>
           </li>
           <li class="nav-item">
             <a
               class="btn btn-outline-light w-100"
-              href="views/veille_technologique.html"
+              href="veille_technologique.html"
               >Veille Technologique</a
             >
           </li>
@@ -71,19 +64,19 @@
             découvrant les tendances technologiques actuelles.
           </p>
           <div class="logos-section my-5 text-center">
-            <div class="d-flex flex-wrap justify-content-center gap-3">
+            <div class="flex flex-wrap justify-content-center gap-3">
               <a href="https://feedly.com/" target="_blank">
                 <img
                   src="../Assets/Images/logo_feedly.png"
                   class="small-logo"
-                  alt="Logo 1"
+                  alt="Logo Feedly"
                 />
               </a>
               <a href="https://www.notion.com/" target="_blank">
                 <img
                   src="../Assets/Images/notion_logo.png"
                   class="small-logo"
-                  alt="Logo 2"
+                  alt="Logo Notion"
                 />
               </a>
             </div>
@@ -129,48 +122,7 @@
       >
     </div>
 
-    <footer class="footer" id="footer">
-      <div class="inner">
-        <div class="column is-logo">
-          <div>
-            <div class="footer_text">GUITOU Jérémy</div>
-            <span class="copyright">© 2025. All rights reserved.</span>
-          </div>
-        </div>
-        <div class="column is-nav">
-          <div class="column-title">Navigation</div>
-          <ul>
-            <li><a href="../index.html" class="footer_a">Accueil</a></li>
-            <li>
-              <a href="views/about.html" class="footer_a">Mon entreprise</a>
-            </li>
-            <li>
-              <a href="views/veille_technologique.html" class="footer_a"
-                >Ma veille</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="column is-nav">
-          <div class="column-title">Contact</div>
-          <ul>
-            <li>
-              <a href="mailto:jguitou35@gmail.com" class="footer_a"
-                ><i class="fa fa-envelope-open"></i> jguitou35@gmail.com</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="column is-nav">
-          <div class="column-title">Informations</div>
-          <ul>
-            <li>
-              <a href="mentions_legales" class="footer_a">Mentions Légales</a>
-            </li>
-            <li><a href="#" class="footer_a">Conditions d'utilisation</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+    <div id="footer"></div>
+    <script src="../components-loader.js"></script>
   </body>
 </html>
