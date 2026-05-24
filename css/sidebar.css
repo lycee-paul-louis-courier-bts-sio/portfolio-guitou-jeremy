@@ -12,6 +12,9 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #f5f5f5;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .d-flex {
@@ -99,12 +102,27 @@ body {
   padding: 12px 16px;
   font-size: 20px;
   cursor: pointer;
-  margin: 10px;
   border-radius: 6px;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 1002;
 }
 
 .toggle-btn:hover {
   background-color: #0b5ed7;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.overlay.active {
+  display: block;
 }
 
 /* Responsive Design */
@@ -127,17 +145,6 @@ body {
   }
 
   .toggle-btn {
-    display: block;
-  }
-
-  .overlay-active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 998;
     display: block;
   }
 }
