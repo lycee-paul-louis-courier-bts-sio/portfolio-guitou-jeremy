@@ -29,22 +29,29 @@ function initLightbox() {
     });
   });
 
+  const closeLightbox = () => {
+    if (!lightbox.classList.contains('active')) {
+      return;
+    }
+    lightbox.classList.remove('active');
+    lightbox.classList.add('closing');
+    setTimeout(() => {
+      lightbox.classList.remove('closing');
+    }, 300);
+  };
+
   // Fermer la lightbox en cliquant sur le bouton de fermeture
   const closeBtn = document.querySelector('.lightbox-close');
-  closeBtn?.addEventListener('click', function () {
-    lightbox.classList.remove('active');
-  });
+  closeBtn?.addEventListener('click', closeLightbox);
 
   // Fermer la lightbox en cliquant sur l'image agrandie
   const lightboxImg = document.getElementById('lightbox-image');
-  lightboxImg?.addEventListener('click', function () {
-    lightbox.classList.remove('active');
-  });
+  lightboxImg?.addEventListener('click', closeLightbox);
 
   // Fermer la lightbox en cliquant sur le fond noir
   lightbox.addEventListener('click', function (e) {
     if (e.target === this) {
-      this.classList.remove('active');
+      closeLightbox();
     }
   });
 
