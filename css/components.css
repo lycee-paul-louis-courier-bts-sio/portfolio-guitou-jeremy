@@ -572,6 +572,7 @@ section h2 {
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
+  color: white;
 }
 
 .footer .column-title {
@@ -728,4 +729,5 @@ section h2 {
   aspect-ratio: 16 / 9;
   background: #f5f5f5;
   line-height: 0;
+  max-width: calc(100% - 12px);
 }
