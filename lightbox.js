@@ -1,6 +1,6 @@
-// Lightbox functionality for images
+// Fonctionnalité lightbox pour les images
 function initLightbox() {
-  // Create lightbox modal if it doesn't exist
+  // Créer la modale lightbox si elle n'existe pas
   let lightbox = document.getElementById('lightbox-modal');
   if (!lightbox) {
     lightbox = document.createElement('div');
@@ -15,7 +15,7 @@ function initLightbox() {
     document.body.appendChild(lightbox);
   }
 
-  // Get all clickable images in image-card elements
+  // Récupérer toutes les images cliquables dans les éléments image-card
   const images = document.querySelectorAll('.image-card img');
 
   images.forEach((img) => {
@@ -29,20 +29,26 @@ function initLightbox() {
     });
   });
 
-  // Close lightbox when clicking the close button
+  // Fermer la lightbox en cliquant sur le bouton de fermeture
   const closeBtn = document.querySelector('.lightbox-close');
   closeBtn?.addEventListener('click', function () {
     lightbox.classList.remove('active');
   });
 
-  // Close lightbox when clicking on the dark background
+  // Fermer la lightbox en cliquant sur l'image agrandie
+  const lightboxImg = document.getElementById('lightbox-image');
+  lightboxImg?.addEventListener('click', function () {
+    lightbox.classList.remove('active');
+  });
+
+  // Fermer la lightbox en cliquant sur le fond noir
   lightbox.addEventListener('click', function (e) {
     if (e.target === this) {
       this.classList.remove('active');
     }
   });
 
-  // Close lightbox with Escape key
+  // Fermer la lightbox avec la touche Échap
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && lightbox.classList.contains('active')) {
       lightbox.classList.remove('active');
@@ -50,7 +56,7 @@ function initLightbox() {
   });
 }
 
-// Initialize when DOM is ready
+// Initialiser quand le DOM est prêt
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initLightbox);
 } else {
