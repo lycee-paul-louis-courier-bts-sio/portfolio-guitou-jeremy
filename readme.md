@@ -48,9 +48,9 @@ git push origin main
 
 ## Configuration de la CI/CD
 
-*Qu'est-ce que le "CI/CD" ?*
+_Qu'est-ce que le "CI/CD" ?_
 
-Le CI/CD (*Continuous Integration / Continuous Deployment* ou Intégration et Déploiement Continus) est une pratique standard dans le monde professionnel (DevOps/SRE). Concrètement, cela signifie la fin des transferts de fichiers manuels et risqués via des logiciels FTP (comme FileZilla).
+Le CI/CD (_Continuous Integration / Continuous Deployment_ ou Intégration et Déploiement Continus) est une pratique standard dans le monde professionnel (DevOps/SRE). Concrètement, cela signifie la fin des transferts de fichiers manuels et risqués via des logiciels FTP (comme FileZilla).
 
 Ici, nous utilisons **GitHub Actions**. Dès que vous effectuez un `git push` sur la branche `main`, un script automatisé (pipeline) s'exécute chez GitHub. Ce pipeline se connecte de façon hautement sécurisée (via clé SSH cryptée) au serveur Linux du lycée, et ordonne au serveur de télécharger uniquement vos nouveaux fichiers. Votre site web est ainsi mis à jour de façon invisible en moins de 10 secondes.
 
